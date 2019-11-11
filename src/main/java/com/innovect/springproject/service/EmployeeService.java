@@ -22,40 +22,29 @@ public class EmployeeService {
     EmployeeRepository employeeRepository;
 
     public List<Employee> getAllEmployee() {
-        /*Employee employee=new Employee("Pepper", "Pots");
-        Employee employee1=new Employee("John","Green");
-
-        employeeRepository.save(employee);
-        employeeRepository.save(employee1);
-
-        return employeeRepository.getAll();*/
-
-
-
 
         //Add new Employee object
-
         Employee employee1=new Employee("Abc","aaa");
-//        Employee employee2=new Employee("Def","ddd");
+        Employee employee2=new Employee("Def","ddd");
 
         Timesheet timesheet1 = new Timesheet(2,6);
         Timesheet timesheet2 = new Timesheet(1,7);
-       /* Timesheet timesheet3 = new Timesheet(2,6);
-        Timesheet timesheet4 = new Timesheet(2,5);*/
+        Timesheet timesheet3 = new Timesheet(2,6);
+        Timesheet timesheet4 = new Timesheet(2,5);
 
         Set<Timesheet> timesheetsOfFirstEmployee=new HashSet<Timesheet>();
         timesheetsOfFirstEmployee.add(timesheet1);
         timesheetsOfFirstEmployee.add(timesheet2);
-/*
+
         Set<Timesheet> timesheetsOfSecondEmployee=new HashSet<Timesheet>();
        timesheetsOfSecondEmployee.add(timesheet3);
-       timesheetsOfSecondEmployee.add(timesheet4);*/
+       timesheetsOfSecondEmployee.add(timesheet4);
 
        employee1.setTimesheets(timesheetsOfFirstEmployee);
-//       employee2.setTimesheets(timesheetsOfSecondEmployee);
+       employee2.setTimesheets(timesheetsOfSecondEmployee);
 
        employeeRepository.save(employee1);
-//       employeeRepository.save(employee2);
+       employeeRepository.save(employee2);
 
         return employeeRepository.getAll();
 

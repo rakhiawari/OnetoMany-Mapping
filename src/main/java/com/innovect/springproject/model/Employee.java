@@ -16,11 +16,11 @@ public class Employee {
     @Column(name = "first_name",unique = true,nullable = false)
     private String firstName;
 
-    @Column(name = "last_name", unique = false,nullable = false)
+    @Column(name = "last_name",nullable = false)
     private String lastName;
 
     @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "employee_id")
     private Set<Timesheet> timesheets;
 
     public Employee(){}

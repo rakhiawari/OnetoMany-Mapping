@@ -19,7 +19,7 @@ public class Timesheet  {
     @Column(name = "hours")
     private Integer hours;
 
-
+    public Timesheet(){}
     public Timesheet( Integer week, Integer hours) {
         this.week = week;
         this.hours = hours;
